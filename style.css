@@ -1,0 +1,12 @@
+ul {
+	list-style-type: none;
+}
+img {
+	height: 200px;
+}
+#imageSet li {
+	display: none;
+}
+#buttonSet li {
+	display: inline;
+}
