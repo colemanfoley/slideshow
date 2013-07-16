@@ -1,2 +1,3 @@
-slideshow
+Slideshow
 =========
+A simple slideshow.
