@@ -10,3 +10,12 @@ img {
 #buttonSet li {
 	display: inline;
 }
+#backAndForthButtons li {
+	display: inline;
+}
+#buttonSet, #backAndForthButtons {
+	display: inline-block;
+}
+#buttonSet {
+	float: right;
+}
