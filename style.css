@@ -1,21 +1,49 @@
 ul {
 	list-style-type: none;
 }
+
 img {
 	height: 200px;
+}
+
+#buttonContainer {
+	width: 768px;
+}
+
+#buttonSet {
+	float: right;
+}
+#imageSet {
+	margin-top: 50px;
 }
 #imageSet li {
 	display: none;
 }
+
+#buttonSet li, #backAndForthButtons li {
+	display: inline-block;
+	cursor: pointer;
+}
+
 #buttonSet li {
-	display: inline;
+  width: 20px;
+  height: 20px;
+  border: solid;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 1px;
 }
-#backAndForthButtons li {
-	display: inline;
-}
+
 #buttonSet, #backAndForthButtons {
 	display: inline-block;
+	margin-left: 0px;
 }
-#buttonSet {
-	float: right;
+
+.active {
+	background-color: black;
+}
+.inactive {
+	background-color: white;
 }

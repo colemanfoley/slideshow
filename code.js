@@ -1,15 +1,31 @@
 $(document).ready(function(){
+	var imageIndex = 1;
 	$('#buttonSet li').click(function(){
-		handleImageChange($(this));
+		imageIndex = $(this).index() + 1;
+		changeImageTo(imageIndex);
 	});
 
-	handleImageChange($('#buttonSet li').first());
+	$('#backButton').click(function(){
+		if (imageIndex > 1) {
+			imageIndex = imageIndex - 1;
+			changeImageTo(imageIndex);
+		};
+	});
+
+	$('#forwardButton').click(function(){
+		if (imageIndex < 3) {
+			imageIndex = imageIndex + 1;
+			changeImageTo(imageIndex);
+		};
+	});
+
+	changeImageTo(imageIndex);
 });
 
-var handleImageChange = function(thisObject) {
+var changeImageTo = function(imageIndex) {
 	$('#imageSet li').hide();
-	$('#imageSet li:nth-child(' + ($(thisObject).index() + 1) + ')').show();
+	$('#imageSet li:nth-child(' + imageIndex + ')').show();
 
-	$('#buttonSet li').css('background-color', 'white');
-	$(thisObject).css('background-color', 'black');
+	$('#buttonSet li').addClass('inactive').removeClass('active');
+	$('#buttonSet li:nth-child(' + imageIndex + ')').removeClass('inactive').addClass('active');
 };
